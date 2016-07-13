@@ -65,6 +65,7 @@ fi
 $extract $CACHE_DIR/$LOGSTASH_PACKAGE
 
 echo "-----> install logstash-input-rethinkdb"
+RAILS_ENV=production bundle exec rake assets:precompile
 $BUILD_DIR/${LOGSTASH_DIR##*/}/bin/plugin install logstash-input-rethinkdb
 
 echo "Exporting PATH" | indent
