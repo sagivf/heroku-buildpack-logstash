@@ -61,8 +61,11 @@ if [ ! -f "$CACHE_DIR/$LOGSTASH_PACKAGE" ]; then
     exit 1
   fi
 fi
-echo "-----> test2"
+
 $extract $CACHE_DIR/$LOGSTASH_PACKAGE
+
+echo "-----> install logstash-input-rethinkdb"
+${LOGSTASH_DIR##*/}/bin/plugin install logstash-input-rethinkdb
 
 echo "Exporting PATH" | indent
 echo 'export PATH="$PATH:'${LOGSTASH_DIR##*/}'/bin"' > $INIT_SCRIPT
