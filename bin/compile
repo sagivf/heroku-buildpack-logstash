@@ -65,7 +65,7 @@ fi
 $extract $CACHE_DIR/$LOGSTASH_PACKAGE
 
 #echo "-----> bundle install"
-#$BUILD_DIR/bundle install --no-deployment
+$BUILD_DIR/vendor/bundle install --no-deployment
 echo "-----> install logstash-input-rethinkdb"
 $BUILD_DIR/${LOGSTASH_DIR##*/}/bin/logstash-plugin install logstash-input-rethinkdb
 
