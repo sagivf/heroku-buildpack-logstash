@@ -1,13 +1,17 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    eventmachine (1.2.0.1)
+    json (2.0.1)
+    rethinkdb (2.3.0.0)
+      json
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-gem "eventmachine"
-gem "rethinkdb"
+  eventmachine
+  rethinkdb
 
 RUBY VERSION
    ruby 2.0.0p648
