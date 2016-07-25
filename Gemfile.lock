@@ -6,6 +6,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+gem "eventmachine"
+gem "rethinkdb"
 
 RUBY VERSION
    ruby 2.0.0p648
