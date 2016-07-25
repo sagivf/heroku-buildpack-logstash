@@ -46,7 +46,7 @@ echo "-----> Installing Logstash..."
 
 $mkdir ${INIT_SCRIPT%/*}
 $mkdir $CACHE_DIR
-echo "-----> test1"
+
 if [ ! -f "$CACHE_DIR/$LOGSTASH_PACKAGE" ]; then
   echo "downloading $DOWNLOAD_URL" | indent
   $download $DOWNLOAD_URL
